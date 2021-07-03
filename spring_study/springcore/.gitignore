@@ -35,3 +35,5 @@ out/
 
 ### VS Code ###
 .vscode/
+/src/main/java/com/sparta/springcore/security/kakao/KakaoOAuth2.java
+/src/main/java/com/sparta/springcore/security/kakao/KakaoUserInfo.java
