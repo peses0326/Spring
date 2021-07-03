@@ -1,6 +1,7 @@
-package com.sparta.springcore;
+package com.sparta.springcore.model;
 
-import com.sparta.springcore.Timestamped;
+import com.sparta.springcore.dto.ProductMypriceRequestDto;
+import com.sparta.springcore.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -35,11 +36,16 @@ public class Product extends Timestamped {
     private int myprice;
 
     // 관심 상품 생성 시 이용합니다.
-    public Product(com.sparta.springcore.ProductRequestDto requestDto) {
+    public Product(ProductRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.image = requestDto.getImage();
         this.link = requestDto.getLink();
         this.lprice = requestDto.getLprice();
         this.myprice = 0;
+    }
+
+
+    public void updateMyPrice(ProductMypriceRequestDto requestDto) {
+        this.myprice = requestDto.getMyprice();
     }
 }
